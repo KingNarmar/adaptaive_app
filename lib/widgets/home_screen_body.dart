@@ -1,4 +1,5 @@
 import 'package:adaptaive_app/widgets/custom_sliver_grid.dart';
+import 'package:adaptaive_app/widgets/custom_sliver_list.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreenBody extends StatelessWidget {
@@ -11,10 +12,12 @@ class HomeScreenBody extends StatelessWidget {
       child: CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
-              child: SizedBox(
-            height: 16,
-          )),
+            child: SizedBox(
+              height: 16,
+            ),
+          ),
           CustomSliverGrid(),
+          CustomSliverList()
         ],
       ),
     );
