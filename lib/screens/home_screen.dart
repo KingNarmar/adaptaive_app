@@ -1,3 +1,4 @@
+import 'package:adaptaive_app/widgets/home_screen_body.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -6,6 +7,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffDCDADC),
       appBar: AppBar(
         leading: const Icon(
           Icons.menu,
@@ -13,6 +15,7 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: Colors.black,
       ),
+      body: const HomeScreenBody(),
     );
   }
 }
