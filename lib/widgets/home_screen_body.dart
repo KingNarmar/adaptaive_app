@@ -18,7 +18,11 @@ class HomeScreenBody extends StatelessWidget {
           ),
           SliverToBoxAdapter(child: LayoutBuilder(
             builder: (context, constraints) {
-              return const CustomSliverGrid();
+              if (constraints.maxWidth > 600) {
+                return const Text("Tablet Break Point");
+              } else {
+                return const CustomSliverGrid();
+              }
             },
           )),
           const CustomSliverList()
