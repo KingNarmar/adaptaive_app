@@ -1,4 +1,5 @@
 
+import 'package:adaptaive_app/widgets/desktop_layout.dart';
 import 'package:flutter/material.dart';
 
 import 'mobile_layout.dart';
@@ -13,10 +14,12 @@ class HomeScreenBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: LayoutBuilder(
         builder: (context, constraints) {
-          if(constraints.maxWidth > 600){
+          if(constraints.maxWidth < 600){
+            return const MobileLayout();
+          }else if(constraints.maxWidth < 900){
             return const TabletLayout();
           }else{
-            return const MobileLayout();
+            return const DesktopLayout();
           }
           
         }
