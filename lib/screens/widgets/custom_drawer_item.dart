@@ -14,9 +14,14 @@ class CustomDrawerItem extends StatelessWidget {
       // add padding
       title: Padding(
         padding: const EdgeInsets.only(left: 16),
-        child: Text(
-          customDrawerItemModel.text,
-          style: const TextStyle(letterSpacing: 4),
+        //Wrap the text with fitted Box and use Scale down and aligment
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          alignment: Alignment.centerLeft,
+          child: Text(
+            customDrawerItemModel.text,
+            style: const TextStyle(letterSpacing: 4),
+          ),
         ),
       ),
     );
