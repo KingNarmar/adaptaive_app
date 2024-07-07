@@ -18,17 +18,23 @@ class _HomeScreenState extends State<HomeScreen> {
       key: scaffoldKey,
       drawer: const CustomDrawer(),
       backgroundColor: const Color(0xffDCDBDC),
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          onPressed: () {
-            scaffoldKey.currentState!.openDrawer();
-          },
-          color: Colors.white,
-        ),
-      ),
+      appBar: buildAppbar(context),
       body: const HomeScreenBody(),
     );
+  }
+
+  AppBar? buildAppbar(BuildContext context) {
+    return MediaQuery.of(context).size.width < 900
+        ? AppBar(
+            backgroundColor: Colors.black,
+            leading: IconButton(
+              icon: const Icon(Icons.menu),
+              onPressed: () {
+                scaffoldKey.currentState!.openDrawer();
+              },
+              color: Colors.white,
+            ),
+          )
+        : null;
   }
 }
