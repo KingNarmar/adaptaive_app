@@ -1,3 +1,4 @@
+import 'package:adaptaive_app/screens/widgets/custom_list.dart';
 import 'package:adaptaive_app/screens/widgets/custom_sliver_grid.dart';
 import 'package:adaptaive_app/screens/widgets/custom_sliver_list.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,7 +23,7 @@ class HomeScreenBody extends StatelessWidget {
             child: LayoutBuilder(
               builder: (context, constraints) {
                 if (constraints.maxWidth > 600) {
-                  return const Text("Tablet Layout");
+                  return const CustomList();
                 } else {
                   return const CustomSliverGrid();
                 }
