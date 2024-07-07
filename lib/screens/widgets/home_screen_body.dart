@@ -12,12 +12,13 @@ class HomeScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16),
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
       child: AdaptiveLayout(
-        mobileLayout: MobileLayout(),
-        tabletLayout: TabletLayout(),
-        desktopLayout: DesktopLayout(),
+        //using call back function to create layouts in lazy way insted of creating all layouts with no needed
+        mobileLayout: (context) => const MobileLayout(),
+        tabletLayout: (context) => const TabletLayout(),
+        desktopLayout: (context) => const DesktopLayout(),
       ),
     );
   }
