@@ -5,5 +5,5 @@ class CustomDrawerItemModel {
 
   final String text;
 
-  CustomDrawerItemModel({required this.icon, required this.text});
+ const CustomDrawerItemModel({required this.icon, required this.text});
 }
