@@ -15,6 +15,9 @@ class CustomDesktopWidget extends StatelessWidget {
           flex: 2,
           child: CustomItem(),
         ),
+        SizedBox(
+          height: 16,
+        ),
         Expanded(
           child: CustomItem2(),
         ),
