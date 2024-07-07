@@ -14,8 +14,13 @@ class CustomDrawer extends StatelessWidget {
           DrawerHeader(
             child: Icon(
               Icons.favorite,
-              size: 50,
+              //change icon size
+              size: 56,
             ),
+          ),
+          //add space between the header section and the List
+          SizedBox(
+            height: 16,
           ),
           CustomDrawerItemListView(),
         ],

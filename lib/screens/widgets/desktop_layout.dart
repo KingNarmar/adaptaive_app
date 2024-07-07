@@ -16,13 +16,20 @@ class DesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 3,
+          //add padding for the tablet layout
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16,),
+            padding: EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
             child: TabletLayout(),
           ),
         ),
         Expanded(
-          child: CustomDesktopWidget(),
+          //add pading 
+          child: Padding(
+            padding: EdgeInsets.only(top: 16),
+            child: CustomDesktopWidget(),
+          ),
         )
       ],
     );

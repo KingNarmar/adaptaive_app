@@ -8,7 +8,8 @@ class CustomList extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: SizedBox(
-        height: 100,
+        //change height
+        height: 180,
         child: ListView.builder(
           itemCount: 15,
           scrollDirection: Axis.horizontal,

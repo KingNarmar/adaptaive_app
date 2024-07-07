@@ -11,9 +11,13 @@ class CustomDrawerItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: Icon(customDrawerItemModel.icon),
-      title: Text(
-        customDrawerItemModel.text,
-        style: const TextStyle(letterSpacing: 4),
+      // add padding
+      title: Padding(
+        padding: const EdgeInsets.only(left: 16),
+        child: Text(
+          customDrawerItemModel.text,
+          style: const TextStyle(letterSpacing: 4),
+        ),
       ),
     );
   }
