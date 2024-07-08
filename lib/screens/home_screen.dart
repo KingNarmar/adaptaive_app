@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   AppBar? buildAppbar(BuildContext context) {
     // increase the width condetion with the padding size to hide the app bar in the same time with changing the layout
-    return MediaQuery.of(context).size.width - 32 < 900
+    return MediaQuery.of(context).size.width - 96 < 900
         ? AppBar(
             backgroundColor: Colors.black,
             leading: IconButton(
